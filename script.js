@@ -2,10 +2,12 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Declare and initialize employees array
-const employees = [];
+const employeesArray = [];
 
 // Collect employee data
 const collectEmployees = function() {
+  
+
   // Get user input to create and return an array of employee objects
 
   let firstName = prompt("Please enter the employee's first name");
@@ -23,12 +25,12 @@ const collectEmployees = function() {
   console.log(employee);
 
   // Add object to array
-  employees.push(employee);
+  employeesArray.push(employee);
 
   // Test for employees array
-  console.log(employees);
+  console.log(employeesArray);
 
-  return employees;
+  return employeesArray;
 }
 
 // Display the average salary
@@ -39,14 +41,21 @@ const displayAverageSalary = function(employeesArray) {
   let totalSalary = 0;
 
   // Use a for-of loop to add all salaries together
-  for (const employee of employees) {
+  for (const employee of employeesArray) {
     totalSalary = totalSalary + employee.salary;
+    console.log(employee.salary);
   }
 
+  // Test for total salary
+  console.log(totalSalary);
+  
   // Divide salary by employees to get mean salary
-  let meanSalary = totalSalary / employees.length;
+  let meanSalary = totalSalary / employeesArray.length;
 
-  return meanSalary;
+  // Test mean salary
+  console.log(meanSalary);
+
+  alert(`Average employee salary is ${meanSalary}.`);
 
 }
 
