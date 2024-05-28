@@ -37,7 +37,7 @@ const collectEmployees = function() {
   }
 
 
-
+  // Return completed array
   return employeesArray;
 }
 
@@ -63,6 +63,7 @@ const displayAverageSalary = function(employeesArray) {
   // Test mean salary
   // console.log(meanSalary);
 
+  // Log and display alert message for mean salary
   console.log(`Average employee salary is ${meanSalary}.`);
 
   return alert(`Average employee salary is ${meanSalary}.`);
@@ -71,12 +72,18 @@ const displayAverageSalary = function(employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+  // Select and display a random employee
 
-  console.log(Math.random(0, employeesArray.length));
-  console.log(employeesArray[Math.random(0, employeesArray.length)]);
+  // Randomly decide a winner from employee array
+  winner = employeesArray[Math.floor(Math.random() * employeesArray.length)];
 
-  return employeesArray[Math.random(0, employeesArray.length)];
+  // Test for new winner object
+  console.log(winner);
+
+  // Log and display alert message for winner
+  console.log(`Congratulations to ${winner.firstName} ${winner.lastName} for winning our weekly coffee house gift card!`);
+
+  return alert(`Congratulations to ${winner.firstName} ${winner.lastName} for winning our weekly coffee house gift card!`);
 
 }
 
