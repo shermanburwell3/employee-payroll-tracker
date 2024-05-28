@@ -5,30 +5,38 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const employeesArray = [];
 
 // Collect employee data
-const collectEmployees = function() {
+const collectEmployees = function() {  //REMINDER: ADD LOOP HERE
   
-
+  let addingEmployees = true;
   // Get user input to create and return an array of employee objects
+  while (addingEmployees) {
+    let firstName = prompt("Please enter the employee's first name");
+    let lastName =   prompt("Please enter the employee's last name");
+    let salary = prompt("Please enter the employee's salary");
 
-  let firstName = prompt("Please enter the employee's first name");
-  let lastName =   prompt("Please enter the employee's last name");
-  let salary = prompt("Please enter the employee's salary");
+    // Create employee object using user input
+    const employee = {
+      firstName: firstName,
+      lastName: lastName,
+      salary: salary
+    };
 
-  // Create employee object using user input
-  const employee = {
-    firstName: firstName,
-    lastName: lastName,
-    salary: salary
-  };
+    // Test for employee object
+    // console.log(employee);
 
-  // Test for employee object
-  // console.log(employee);
+    // Add object to array
+    employeesArray.push(employee);
 
-  // Add object to array
-  employeesArray.push(employee);
+    // Test for employees array
+    // console.log(employeesArray);
 
-  // Test for employees array
-  // console.log(employeesArray);
+    // Ask user if they want to continue adding employees
+    addingEmployees = confirm("Add another employee?");
+    console.log(addingEmployees)
+
+  }
+
+
 
   return employeesArray;
 }
