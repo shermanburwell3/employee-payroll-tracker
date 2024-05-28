@@ -18,7 +18,7 @@ const collectEmployees = function() {
     const employee = {
       firstName: firstName,
       lastName: lastName,
-      salary: salary
+      salary: parseInt(salary)
     };
 
     // Test for employee object
@@ -63,6 +63,12 @@ const displayAverageSalary = function(employeesArray) {
   // Test mean salary
   // console.log(meanSalary);
 
+  // Format salary as USD
+  meanSalary = meanSalary.toLocaleString("en-US",{
+    style:"currency",
+    currency:"USD"
+  });
+  
   // Log and display alert message for mean salary
   console.log(`Average employee salary is ${meanSalary}.`);
 
