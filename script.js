@@ -22,13 +22,13 @@ const collectEmployees = function() {
   };
 
   // Test for employee object
-  console.log(employee);
+  // console.log(employee);
 
   // Add object to array
   employeesArray.push(employee);
 
   // Test for employees array
-  console.log(employeesArray);
+  // console.log(employeesArray);
 
   return employeesArray;
 }
@@ -42,20 +42,20 @@ const displayAverageSalary = function(employeesArray) {
 
   // Use a for-of loop to add all salaries together
   for (const employee of employeesArray) {
-    totalSalary = totalSalary + employee.salary;
+    totalSalary = totalSalary + parseInt(employee.salary);
     console.log(employee.salary);
   }
 
   // Test for total salary
-  console.log(totalSalary);
-  
+  // console.log(totalSalary);
+
   // Divide salary by employees to get mean salary
   let meanSalary = totalSalary / employeesArray.length;
 
   // Test mean salary
-  console.log(meanSalary);
+  // console.log(meanSalary);
 
-  alert(`Average employee salary is ${meanSalary}.`);
+  return console.log(`Average employee salary is ${meanSalary}.`);
 
 }
 
