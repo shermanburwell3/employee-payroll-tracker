@@ -5,7 +5,7 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const employeesArray = [];
 
 // Collect employee data
-const collectEmployees = function() {  //REMINDER: ADD LOOP HERE
+const collectEmployees = function() {
   
   let addingEmployees = true;
   // Get user input to create and return an array of employee objects
@@ -43,9 +43,9 @@ const collectEmployees = function() {  //REMINDER: ADD LOOP HERE
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  // Calculate and display the average salary
 
-  // Declare and initialize total salary
+  // Declare and initialize total salary variable
   let totalSalary = 0;
 
   // Use a for-of loop to add all salaries together
@@ -63,13 +63,21 @@ const displayAverageSalary = function(employeesArray) {
   // Test mean salary
   // console.log(meanSalary);
 
-  return console.log(`Average employee salary is ${meanSalary}.`);
+  console.log(`Average employee salary is ${meanSalary}.`);
+
+  return alert(`Average employee salary is ${meanSalary}.`);
 
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+
+  console.log(Math.random(0, employeesArray.length));
+  console.log(employeesArray[Math.random(0, employeesArray.length)]);
+
+  return employeesArray[Math.random(0, employeesArray.length)];
+
 }
 
 /*
