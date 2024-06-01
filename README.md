@@ -9,9 +9,11 @@ THis is an employee payroll tracker that will display the average salary of all 
 
 Click on the "Add Employees" button on the screen. Enter the information prompted for by the website. After entering the employee's first name, last name, and yearly salary, you may choose to enter more information (by selecting OK), or finish entering information (by selecting CANCEL). After you are finished entering employee information, a message will be displayed showing the average salary of all employees entered, followed by a message selecting a random employee as a winner for a drawing.
 
+Please use NUMERICAL CHARACTERS ONLY ehn entering salary. The application automatically formats it into USD currency.
+
 ## Screenshot
 
-
+![Application Screenshot](image.png)
 
 ## Credits
 

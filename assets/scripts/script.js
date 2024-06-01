@@ -32,7 +32,7 @@ const collectEmployees = function() {
 
     // Ask user if they want to continue adding employees
     addingEmployees = confirm("Add another employee?");
-    console.log(addingEmployees)
+    // console.log(addingEmployees)
 
   }
 
@@ -51,7 +51,7 @@ const displayAverageSalary = function(employeesArray) {
   // Use a for-of loop to add all salaries together
   for (const employee of employeesArray) {
     totalSalary = totalSalary + parseInt(employee.salary);
-    console.log(employee.salary);
+    // console.log(employee.salary);
   }
 
   // Test for total salary
@@ -84,7 +84,7 @@ const getRandomEmployee = function(employeesArray) {
   winner = employeesArray[Math.floor(Math.random() * employeesArray.length)];
 
   // Test for new winner object
-  console.log(winner);
+  // console.log(winner);
 
   // Log and display alert message for winner
   console.log(`Congratulations to ${winner.firstName} ${winner.lastName} for winning our weekly coffee house gift card!`);
